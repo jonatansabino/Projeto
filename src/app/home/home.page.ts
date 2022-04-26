@@ -33,8 +33,8 @@ export class HomePage {
 
   onCalcular(){
     const IMC = this.weight / (this.height * this.height);
-    const degree = this.ImcCalcular(IMC);
-    this.showMessage(`IMC = ${IMC.toFixed(2)}   -   ${degree}`)
+    const peso = this.ImcCalcular(IMC);
+    this.showMessage(`IMC = ${IMC.toFixed(2)}   -   ${peso}`)
   }
 
   async showMessage(msg: string){
