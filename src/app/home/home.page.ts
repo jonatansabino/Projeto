@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 
 @Component({
@@ -26,8 +26,10 @@ export class HomePage {
       return 'Sobrepeso';
     } else if (IMC < 40){
       return 'Odesidade';
-    } else {
+    } else if (IMC >40) {
       return 'Odesidade Grave';
+    }else{
+      return 'Informe um valor'
     }
   }
 
@@ -45,7 +47,7 @@ export class HomePage {
 
     const toast = await this.toastController.create({
       message: msg,
-      color: 'tertiary',
+      color: 'dark',
       buttons: [
         {
           icon: 'close'
